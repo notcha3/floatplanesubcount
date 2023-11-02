@@ -1,0 +1,5 @@
+﻿project ("lttsubcount")
+add_executable (lttsubcount "main.c" "main.h" "subs.c" "subs.h")
+target_link_libraries(${PROJECT_NAME} winhttp)
+target_compile_options(${PROJECT_NAME} PUBLIC -DUNICODE)
+set_target_properties(${PROJECT_NAME} PROPERTIES WIN32_EXECUTABLE TRUE)
